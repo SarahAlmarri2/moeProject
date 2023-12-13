@@ -1,0 +1,144 @@
+/* include fonts */
+@font-face {
+  font-family: "Tahoma";
+  src: url("../fonts/TAHOMA.TTF") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Tahoma";
+  src: url("./fonts/TAHOMABD.TTF") format("truetype");
+  font-weight: bold;
+}
+.bg-all {
+  background-image: url(./assets/img/desktopPattern.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #e7e7e7;
+  height: 100vh;
+}
+
+/* Add a media query for smaller screens if necessary */
+@media (max-width: 768px) {
+  .bg-all {
+    height: 100%;
+    background-image: url(./assets/img/mobilePattern.png);
+  }
+}
+
+.parent {
+  width: 290px;
+  height: 300px;
+  perspective: 1000px;
+  /* margin: 30px; */
+}
+
+.card2 {
+  height: 100%;
+  border-radius: 50px;
+  background: #a7deff;
+  transition: all 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  box-shadow: rgba(56, 174, 220, 0) 40px 50px 25px -40px,
+    rgba(47, 168, 224, 0.2) 0px 25px 25px -5px;
+}
+.glass {
+  transform-style: preserve-3d;
+  position: absolute;
+  inset: 8px;
+  border-radius: 55px;
+  border-top-right-radius: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.349) 0%,
+    rgba(255, 255, 255, 0.815) 100%
+  );
+  box-shadow: rgba(56, 174, 220, 0) 40px 50px 25px -40px,
+    rgba(47, 168, 224, 0.2) 0px 25;
+  transform: translate3d(0px, 0px, 25px);
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  transition: all 0.5s ease-in-out;
+}
+.content {
+  padding: 100px 25px 0px 0px;
+  transform: translate3d(0, 0, 26px);
+}
+.content .title {
+  display: block;
+  color: #14274a;
+  font-weight: 900;
+  font-size: 25px;
+  font-family: "Tahoma";
+}
+.logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-style: preserve-3d;
+}
+.logo .circle {
+  display: block;
+  position: absolute;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  box-shadow: rgba(100, 100, 111, 0.2) -10px 10px 20px 0px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background: #48a0d882;
+  transition: all 0.5s ease-in-out;
+}
+.logo .circle4 {
+  width: 80px;
+  transform: translate3d(0, 0, 80px);
+  top: 23px;
+  right: 23px;
+  transition-delay: 1.2s;
+}
+.logo .circle5 {
+  width: 50px;
+  transform: translate3d(0, 0, 100px);
+  top: 39px;
+  right: 39px;
+  display: grid;
+  place-content: center;
+  transition-delay: 1.6s;
+}
+.logo .circle5 .svg {
+  width: 20px;
+  fill: white;
+}
+
+.parent:hover .card2 {
+  background-color: #14274a;
+  transform: rotate3d(1, 1, 0, 30deg);
+  box-shadow: rgba(5, 71, 17, 0.3) 30px 50px 25px -40px,
+    rgba(5, 71, 17, 0.1) 0px 25px 30px 0px;
+}
+.parent:hover .card2 .bottom .social-buttons-container .social-button {
+  transform: translate3d(0, 0, 50px);
+  box-shadow: rgba(5, 71, 17, 0.2) -5px 20px 10px 0px;
+}
+.parent:hover .card2 .logo .circle2 {
+  transform: translate3d(0, 0, 60px);
+}
+.glass:hover {
+  background-color: #a7deff;
+}
+
+.parent:hover .card2 .logo .circle3 {
+  transform: translate3d(0, 0, 80px);
+}
+.parent:hover .card2 .logo .circle4 {
+  transform: translate3d(0, 0, 100px);
+}
+.parent:hover .card2 .logo .circle5 {
+  transform: translate3d(0, 0, 120px);
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
